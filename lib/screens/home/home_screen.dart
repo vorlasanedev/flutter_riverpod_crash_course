@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod_crash_course/shared/cart_icon.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -8,7 +9,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Garage Sale Products'),
+        title: Text(dotenv.env['APP_NAME'] ?? 'Garage'),
         actions: const [CartIcon()],
       ),
       body: Padding(

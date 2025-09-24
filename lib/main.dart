@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod_crash_course/screens/home/home_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // print('Current directory: ${Directory.current.path}');
+  await dotenv.load(fileName: '.env');
+
   runApp(const MyApp());
 }
 
