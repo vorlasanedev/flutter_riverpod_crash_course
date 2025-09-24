@@ -7,7 +7,14 @@ git clone with branch
 git clone --branch starter-project --single-branch https://github.com/iamshaunjp/flutter-riverpod-tutorial.git
 ```
 ## Project Structure
+git push with new branch
+```
+git checkout -b starter-project
+git add .
+git commit -m "add new branch"
+git push -u origin starter-project
 
+```
 ##
 
 ##
