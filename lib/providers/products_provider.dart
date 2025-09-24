@@ -1,0 +1,41 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod_crash_course/models/product.dart';
+
+/// dummy product list
+const List<Product> allProducts = [
+  Product(
+    id: '1',
+    title: 'Groovy',
+    price: 12,
+    image: 'assets/products/shorts.png',
+  ),
+  Product(
+    id: '2',
+    title: 'Karatid',
+    price: 12,
+    image: 'assets/products/karati.png',
+  ),
+  Product(
+    id: '3',
+    title: 'Demin Jeans',
+    price: 124,
+    image: 'assets/products/jeans.png',
+  ),
+  Product(
+    id: '4',
+    title: 'Red Bagpack',
+    price: 234,
+    image: 'assets/products/backpack.png',
+  ),
+];
+
+/// Provider
+
+final productsProvider = Provider((ref) {
+  return allProducts;
+});
+
+///
+final reducedProductsProvider = Provider((ref) {
+  return allProducts.where((p) => p.price < 50).toList();
+});

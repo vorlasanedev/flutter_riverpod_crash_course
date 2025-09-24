@@ -13,9 +13,11 @@ git checkout -b starter-project
 git add .
 git commit -m "add new branch"
 git push -u origin starter-project
+```
+## Add dependencies
+```
 
 ```
-##
 
 ##
 
