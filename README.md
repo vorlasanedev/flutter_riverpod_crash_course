@@ -17,8 +17,30 @@ git push -u origin starter-project
 ## Add dependencies
 ```
 
-```
+environment:
+  sdk: ">=3.8.0 <4.0.0"
 
+dependencies:
+  
+  flutter:
+    sdk: flutter
+  custom_lint: ^0.7.6
+  flutter_dotenv: ^6.0.0
+  flutter_riverpod: ^2.4.13
+  google_fonts: ^6.3.1
+  riverpod_annotation: ^2.6.1
+  
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.4.13
+  flutter_lints: ^6.0.0
+  riverpod_lint: ^2.6.5
+  riverpod_generator: ^2.0.0
+
+```
+//TODO: #4 Stateles Conummer (continue...)
 ##
 
 ##
