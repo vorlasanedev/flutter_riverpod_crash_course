@@ -1,14 +1,19 @@
-import 'package:riverpod_annotation/riverpod_annotation.dart';
+// providers/cart_provider.dart
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod_crash_course/models/product.dart';
 
-part 'cart_provider.g.dart';
-
-@riverpod
-class CartNotifier extends _$CartNotifier {
+class CartNotifier extends Notifier<Set<Product>> {
   @override
   Set<Product> build() {
     // Initial product
-    return {};
+    return {
+      Product(
+        id: '3',
+        title: 'Red Backpape', // typo fixed from 'Backpage'
+        price: 14,
+        image: 'assets/products/backpack.png',
+      ),
+    };
   }
 
   // Example: method to add product
@@ -25,3 +30,7 @@ class CartNotifier extends _$CartNotifier {
     }
   }
 }
+
+final cartNotifierProvider = NotifierProvider<CartNotifier, Set<Product>>(
+  () => CartNotifier(),
+);
