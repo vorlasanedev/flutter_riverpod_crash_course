@@ -18,6 +18,7 @@ class _CartScreenState extends ConsumerState<CartScreen> {
     // Watch the provider for cart products
     // final cartProducts = ref.watch(reducedProductsProvider);
     final cartProducts = ref.watch(cartNotifierProvider);
+    final cartTotalPrice = ref.watch(cartTotalProvider);
 
     return Scaffold(
       appBar: AppBar(title: const Text('Your Cart'), centerTitle: true),
@@ -53,6 +54,7 @@ class _CartScreenState extends ConsumerState<CartScreen> {
             }),
             // Add your totals display here if needed
             // e.g., total price, checkout button, etc.
+            Text('Total Price \$${cartTotalPrice}'),
           ],
         ),
       ),

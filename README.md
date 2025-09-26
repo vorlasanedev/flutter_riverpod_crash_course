@@ -41,6 +41,20 @@ dev_dependencies:
 
 ```
 //TODO: #4 Stateles Conummer (continue...)
-##
+## Generate class g with riverpod annotaion
+maun run
+```
+flutter pub run build_runner
+
+if run fail
+
+flutter pub run build_runner build --delete-conflicting-outputs
+
+```
+
+auto run generate
+```
+dart run build_runner run watch
+```
 
 ##
