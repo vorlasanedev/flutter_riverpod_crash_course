@@ -8,7 +8,7 @@ part of 'products_provider.dart';
 
 String _$productsHash() => r'71142ae3ed0349ae544109b0490fec9e77bcaceb';
 
-/// Provider
+/// Provider manual
 ///
 /// Generated the Provider
 /// comand: dart run build_runner watch

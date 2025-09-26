@@ -32,7 +32,7 @@ const List<Product> allProducts = [
   ),
 ];
 
-/// Provider
+/// Provider manual
 
 // final productsProvider = Provider((ref) {
 //   return allProducts;
