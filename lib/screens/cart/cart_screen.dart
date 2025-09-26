@@ -37,6 +37,16 @@ class _CartScreenState extends ConsumerState<CartScreen> {
                     Text(product.title),
                     Expanded(child: SizedBox()), // spacer to push total to end
                     Text('\$${product.price}'),
+
+                    IconButton(
+                      // Trailing delete button
+                      icon: Icon(Icons.delete),
+                      onPressed: () {
+                        ref
+                            .read(cartNotifierProvider.notifier)
+                            .removeProduct(product);
+                      },
+                    ),
                   ],
                 ),
               );
