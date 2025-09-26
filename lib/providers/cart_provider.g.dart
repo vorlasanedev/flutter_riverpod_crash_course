@@ -8,9 +8,7 @@ part of 'cart_provider.dart';
 
 String _$cartTotalHash() => r'c1c73ff9e529ccfc4f1d57e2074b69db9700c8c0';
 
-/// Annotationi Read providerdert amount
-///
-/// Copied from [cartTotal].
+/// See also [cartTotal].
 @ProviderFor(cartTotal)
 final cartTotalProvider = AutoDisposeProvider<int>.internal(
   cartTotal,
@@ -25,7 +23,7 @@ final cartTotalProvider = AutoDisposeProvider<int>.internal(
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
 typedef CartTotalRef = AutoDisposeProviderRef<int>;
-String _$cartNotifierHash() => r'9e0ce989ed5af28b82a06789fc93d2da7e3aeb9d';
+String _$cartNotifierHash() => r'868cc011e6b020d1e56c8d0afecb54429d549df9';
 
 /// See also [CartNotifier].
 @ProviderFor(CartNotifier)

@@ -7,26 +7,23 @@ part 'cart_provider.g.dart';
 class CartNotifier extends _$CartNotifier {
   @override
   Set<Product> build() {
-    // Initial product
+    // Starts empty
     return {};
   }
 
-  // Example: method to add product
   void addProduct(Product product) {
     if (!state.contains(product)) {
       state = {...state, product};
     }
   }
 
-  // Example: method to remove product
   void removeProduct(Product product) {
     if (state.contains(product)) {
-      state = state.where((p) => p.id != product.id).toSet();
+      state = {...state}..remove(product);
     }
   }
 }
 
-/// Annotationi Read providerdert amount
 @riverpod
 int cartTotal(ref) {
   final cartProducts = ref.watch(cartNotifierProvider);
