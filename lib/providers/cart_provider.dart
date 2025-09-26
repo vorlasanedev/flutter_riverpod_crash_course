@@ -8,7 +8,7 @@ class CartNotifier extends Notifier<Set<Product>> {
     // Initial product
     return {
       Product(
-        id: '4',
+        id: '3',
         title: 'Red Backpape', // typo fixed from 'Backpage'
         price: 14,
         image: 'assets/products/backpack.png',
@@ -18,12 +18,16 @@ class CartNotifier extends Notifier<Set<Product>> {
 
   // Example: method to add product
   void addProduct(Product product) {
-    state = {...state, product};
+    if (!state.contains(product)) {
+      state = {...state, product};
+    }
   }
 
   // Example: method to remove product
-  void removeProduct(String productId) {
-    state = {...state.where((p) => p.id != productId)};
+  void removeProduct(Product product) {
+    if (state.contains(product)) {
+      state = state.where((p) => p.id != product.id).toSet();
+    }
   }
 }
 
